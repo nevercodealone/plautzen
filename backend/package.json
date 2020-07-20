@@ -18,9 +18,9 @@
     "eslint-plugin-react": "^7.14.0"
   },
   "dependencies": {
-    "knex": "latest",
+    "knex": "^0.21.2",
     "lodash": "^4.17.5",
-    "sqlite3": "latest",
+    "sqlite3": "^5.0.0",
     "strapi": "3.0.0-beta.14",
     "strapi-admin": "3.0.0-beta.14",
     "strapi-hook-bookshelf": "3.0.0-beta.14",
