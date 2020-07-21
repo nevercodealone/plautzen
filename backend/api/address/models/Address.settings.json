@@ -1,0 +1,34 @@
+{
+  "connection": "default",
+  "collectionName": "addresses",
+  "info": {
+    "name": "address",
+    "description": "the location"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": [
+      "created_at",
+      "updated_at"
+    ],
+    "comment": ""
+  },
+  "attributes": {
+    "streetandnumber": {
+      "type": "string",
+      "required": true
+    },
+    "zipcode": {
+      "type": "integer",
+      "required": true
+    },
+    "town": {
+      "type": "string",
+      "required": true
+    },
+    "restaurant": {
+      "model": "restaurant",
+      "via": "address"
+    }
+  }
+}

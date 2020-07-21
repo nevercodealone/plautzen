@@ -25,6 +25,10 @@
     "dishes": {
       "collection": "dish",
       "via": "restaurant"
+    },
+    "address": {
+      "model": "address",
+      "via": "restaurant"
     }
   }
 }

@@ -20,12 +20,19 @@
             :key="restaurant.id"
             class="card"
           >
-            <img :src="restaurant.image.url" class="card-img-top" />
+            <router-link
+              :to="{ name: 'restaurants-id', params: { id: restaurant.id } }"
+              tag="a"
+              class="btn btn-primary"
+            >
+              <img :src="restaurant.image.url" class="card-img-top" />
+            </router-link>
             <div class="card-body">
               <h5 class="card-title">{{ restaurant.name }}</h5>
               <p class="card-text">
                 {{ restaurant.description || 'No description provided' }}.
               </p>
+              <div>{{ restaurant.address.zipcode }}</div>
               <router-link
                 :to="{ name: 'restaurants-id', params: { id: restaurant.id } }"
                 tag="a"
@@ -73,6 +80,9 @@ export default {
               description
               image {
                 url
+              }
+              address {
+                zipcode
               }
             }
           }
